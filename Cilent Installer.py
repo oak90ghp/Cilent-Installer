@@ -157,7 +157,7 @@ class PyInstallerGUI:
 
     def browse_icon(self):
         iconfile = filedialog.askopenfilename(
-            filetypes=[("Python源代码文件", "*.py"), ("任意文件", "*.*")]
+            filetypes=[("图标文件", "*.bmp"),("图标文件", "*.gif"),("图标文件", "*.jpg"),("图标文件", "*.png"),("图标文件", "*.ico"), ("任意文件", "*.*")]
         )
         if iconfile:
             self.pyinstaller_args['icon'].set(iconfile)
@@ -255,7 +255,7 @@ class PyInstallerGUI:
                 stderr=subprocess.STDOUT,
                 universal_newlines=True,
                 bufsize=1,
-                encoding='utf-8'
+                encoding='ANSI'
             )
 
             # 实时输出
