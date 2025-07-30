@@ -47,6 +47,16 @@ class PyInstallerGUI:
         main_frame = ttk.Frame(self.root, padding="10")
         main_frame.pack(fill=tk.BOTH, expand=True)
 
+        # 添加底部文字
+        footer_frame = ttk.Frame(self.root)
+        footer_frame.pack(side=tk.BOTTOM, pady=5)
+        footer_label = ttk.Label(footer_frame, text="Cilent To-Do是一个开源的App，您可以在Github上找到该项目，部分内容使用了Trae AI编写(Github仓库：https://github.com/oak90ghp/Cilent-To-Do)", font=("Segoe UI", 8), foreground="#888888")
+        footer_label.pack()
+        footer_frame = ttk.Frame(self.root)
+        footer_frame.pack(side=tk.BOTTOM, pady=5)
+        footer_label = ttk.Label(footer_frame, text="欢迎来到官网体验更多App", font=("Segoe UI", 8), foreground="#888888")
+        footer_label.pack()
+
         # 文件选择区域
         file_frame = ttk.LabelFrame(main_frame, text="文件选择", padding="10")
         file_frame.pack(fill=tk.X, pady=(0, 10))
